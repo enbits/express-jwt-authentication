@@ -1,7 +1,7 @@
 {
   "name": "enbits_api",
   "version": "1.0.0",
-  "description": "api for enbits website",
+  "description": "Example of JWT authentication in ExpressJS",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
