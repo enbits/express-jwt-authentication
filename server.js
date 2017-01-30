@@ -10,12 +10,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('secret', config.secret);
 
 //routes definition
-var posts = require('./routes/posts');
-var admin = require('./routes/admin');
-var authenticate = require('./routes/authenticate');
+let posts         = require('./routes/posts');
+let admin         = require('./routes/admin');
+let authenticate  = require('./routes/authenticate');
+let auth          = require('./middleware/auth')
 
 app.use(config.prefix + '/posts', posts);
-app.use(config.prefix + '/admin', admin);
+app.use(config.prefix + '/admin', auth, admin);
 app.use(config.prefix + '/authenticate', authenticate);
 
 //engage!

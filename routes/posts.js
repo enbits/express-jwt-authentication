@@ -1,8 +1,10 @@
-var express = require('express');
-var router = express.Router();
+'use strict'
+
+let express = require('express')
+let router = express.Router()
 
 router.get('/', (req, res) => {
-  var posts = [
+  let posts = [
     {
       id: 1,
       title: 'The First Post',
@@ -14,7 +16,7 @@ router.get('/', (req, res) => {
       content: 'Content of the second post',
     },
   ]
-  res.json(posts);
-});
+  res.json(posts)
+})
 
-module.exports = router;
+module.exports = router

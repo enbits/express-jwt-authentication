@@ -1,11 +1,11 @@
-var jwt = require('jsonwebtoken');
+let jwt = require('jsonwebtoken')
 
-var verifyToken = function(token, secret) {
+let verifyToken = function(token, secret) {
   try {
-    return decoded = jwt.verify(token, secret);
+    return decoded = jwt.verify(token, secret)
   } catch(err) {
-    return false;
+    return false
   }
 }
 
-module.exports = verifyToken;
+module.exports = verifyToken
